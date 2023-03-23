@@ -22,10 +22,10 @@ class Conjunto:
     def id(self):
         return self.__id
 
-    def contiene(self, elemento):
+    def contiene(self, elemento: Elemento) -> bool:
         return elemento.nombre in [elem.nombre for elem in self.elementos]
 
-    def agregar_elemento(self, elemento):
+    def agregar_elemento(self, elemento: Elemento) -> None:
         if not self.contiene(elemento):
             self.elementos.append(elemento)
 
